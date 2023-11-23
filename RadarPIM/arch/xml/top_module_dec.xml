@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<rvx>
+  <dec_ip>
+    <name>RadarPIM</name>
+    <hdl_name>RADARPIM</hdl_name>
+    <signal>
+      <name>boot_mode</name>
+      <width type="text">`BW_BOOT_MODE</width>
+      <port>input</port>
+      <comm_type>boot_mode</comm_type>
+    </signal>
+    <signal>
+      <name>external_clk_0</name>
+      <port>input</port>
+      <width type="dec">1</width>
+    </signal>
+    <signal>
+      <name>external_rstnn</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <comm_type>external_rstnn</comm_type>
+    </signal>
+    <signal>
+      <name>led_list</name>
+      <width type="text">(1)*(1)</width>
+      <port>output</port>
+    </signal>
+    <signal>
+      <name>uwb_reset</name>
+      <width type="dec">1</width>
+      <port>inout</port>
+      <role>sender</role>
+      <sync/>
+      <init/>
+    </signal>
+    <signal>
+      <name>oled_sdcsel</name>
+      <width type="dec">1</width>
+      <port>inout</port>
+      <role>wire</role>
+      <sync/>
+      <init/>
+    </signal>
+    <signal>
+      <name>oled_srstnn</name>
+      <width type="dec">1</width>
+      <port>inout</port>
+      <role>wire</role>
+      <sync/>
+      <init/>
+    </signal>
+    <signal>
+      <name>oled_svbat</name>
+      <width type="dec">1</width>
+      <port>inout</port>
+      <role>wire</role>
+      <sync/>
+      <init/>
+    </signal>
+    <signal>
+      <name>oled_svdd</name>
+      <width type="dec">1</width>
+      <port>inout</port>
+      <role>wire</role>
+      <sync/>
+      <init/>
+    </signal>
+    <signal>
+      <name>pjtag_rtck</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>pjtag_rtrstnn</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>pjtag_rtms</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>pjtag_rtdi</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>pjtag_rtdo</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>uart_readymade_tx_list</name>
+      <width type="text">(1)*(1)</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>uart_readymade_rx_list</name>
+      <width type="text">(1)*(1)</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>printf_tx</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>printf_rx</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>oled_sclk</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>oled_scs</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>oled_sdq0</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>oled_sdq1</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>spi_flash_sclk</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>spi_flash_scs</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>spi_flash_sdq0</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <signal>
+      <name>spi_flash_sdq1</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <sync>None</sync>
+      <init>None</init>
+    </signal>
+    <include_header>ervp_platform_controller_memorymap_offset</include_header>
+    <include_header>ervp_external_peri_group_memorymap_offset</include_header>
+    <include_header>memorymap_info</include_header>
+    <include_header>ervp_global</include_header>
+    <include_header>platform_info</include_header>
+    <include_header>munoc_network_include</include_header>
+    <top_module/>
+    <has_user_region/>
+  </dec_ip>
+</rvx>

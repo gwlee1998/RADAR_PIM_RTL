@@ -1,0 +1,5 @@
+SRC_DIR_LIST += ${PLATFORM_DIR}/user/rtl/src
+INC_DIR_LIST += ${PLATFORM_DIR}/user/rtl/include
+
+SIM_SRC_DIR_LIST += ${PLATFORM_DIR}/user/sim/src
+SIM_INC_DIR_LIST += ${PLATFORM_DIR}/user/sim/include

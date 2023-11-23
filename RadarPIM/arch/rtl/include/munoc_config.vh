@@ -1,0 +1,13 @@
+`ifndef __MUNOC_CONFIG_H__
+`define __MUNOC_CONFIG_H__
+
+`define NUM_SLAVE (6)
+`define NUM_MASTER (3)
+`define BW_SLAVE_NODE_ID (3)
+`define BW_MASTER_NODE_ID (2)
+`define BW_LONGEST_AXI_TID (4)
+`define BW_SHORTEST_MASTER_DATA (32)
+`define BW_LONGEST_MASTER_DATA (32)
+`define MUNOC_USE_SINGLE_DATA_WIDTH
+
+`endif

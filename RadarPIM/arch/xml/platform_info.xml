@@ -1,0 +1,1141 @@
+<?xml version="1.0" ?>
+<rvx>
+  <info>
+    <name>memorymap_info</name>
+    <define>
+      <name>I_TEST1_SLAVE_BASEADDR</name>
+      <value type="hex">0x40000000</value>
+    </define>
+    <define>
+      <name>I_TEST1_SLAVE_SIZE</name>
+      <value type="hex">0x80000</value>
+    </define>
+    <define>
+      <name>I_TEST1_SLAVE_LASTADDR</name>
+      <value type="hex">0x4007ffff</value>
+    </define>
+    <define>
+      <name>I_SYSTEM_SRAM_BASEADDR</name>
+      <value type="hex">0x40080000</value>
+    </define>
+    <define>
+      <name>I_SYSTEM_SRAM_SIZE</name>
+      <value type="hex">0x40000</value>
+    </define>
+    <define>
+      <name>I_SYSTEM_SRAM_LASTADDR</name>
+      <value type="hex">0x400bffff</value>
+    </define>
+    <define>
+      <name>DEFAULT_SLAVE_BASEADDR</name>
+      <value type="hex">0x400c0000</value>
+    </define>
+    <define>
+      <name>DEFAULT_SLAVE_SIZE</name>
+      <value type="hex">0x1000</value>
+    </define>
+    <define>
+      <name>DEFAULT_SLAVE_LASTADDR</name>
+      <value type="hex">0x400c0fff</value>
+    </define>
+    <define>
+      <name>COMMON_PERI_GROUP_BASEADDR</name>
+      <value type="hex">0xe0000000</value>
+    </define>
+    <define>
+      <name>COMMON_PERI_GROUP_SIZE</name>
+      <value type="hex">0x10000</value>
+    </define>
+    <define>
+      <name>COMMON_PERI_GROUP_LASTADDR</name>
+      <value type="hex">0xe000ffff</value>
+    </define>
+    <define>
+      <name>PLATFORM_CONTROLLER_BASEADDR</name>
+      <value type="hex">0xe1000000</value>
+    </define>
+    <define>
+      <name>PLATFORM_CONTROLLER_SIZE</name>
+      <value type="hex">0x40000</value>
+    </define>
+    <define>
+      <name>PLATFORM_CONTROLLER_LASTADDR</name>
+      <value type="hex">0xe103ffff</value>
+    </define>
+    <define>
+      <name>EXTERNAL_PERI_GROUP_BASEADDR</name>
+      <value type="hex">0xe1040000</value>
+    </define>
+    <define>
+      <name>EXTERNAL_PERI_GROUP_SIZE</name>
+      <value type="hex">0x10000</value>
+    </define>
+    <define>
+      <name>EXTERNAL_PERI_GROUP_LASTADDR</name>
+      <value type="hex">0xe104ffff</value>
+    </define>
+    <define>
+      <name>CORE_PERI_GROUP_BASEADDR</name>
+      <value type="hex">0xf0000000</value>
+    </define>
+    <define>
+      <name>CORE_PERI_GROUP_SIZE</name>
+      <value type="hex">0x1000</value>
+    </define>
+    <define>
+      <name>CORE_PERI_GROUP_LASTADDR</name>
+      <value type="hex">0xf0000fff</value>
+    </define>
+    <define>
+      <name>NOC_CONTROLLER_BASEADDR</name>
+      <value type="hex">0x400c0000</value>
+    </define>
+    <define>
+      <name>IROM_BASEADDR</name>
+      <value type="hex">0xe0000000</value>
+    </define>
+  </info>
+  <info>
+    <name>hw_info</name>
+    <define>
+      <name>PLATFORM_ADDR</name>
+      <value type="dec">32</value>
+    </define>
+    <define>
+      <name>NUM_CORE_USER</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_CORE_TEAM</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_LOCK_USER</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_LOCK_SYSTEM</name>
+      <value type="dec">5</value>
+    </define>
+    <define>
+      <name>NUM_BARRIER_USER</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_BARRIER_SYSTEM</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_AUTO_ID</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_GLOBAL_TAG</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>SRAM_SIZE</name>
+      <value type="hex">0x40000</value>
+    </define>
+    <define>
+      <name>SRAM_CELL_SIZE</name>
+      <value type="hex">0x40000</value>
+    </define>
+    <define>
+      <name>SRAM_CELL_WIDTH</name>
+      <value type="dec">32</value>
+    </define>
+    <define>
+      <name>SRAM_PORT_WIDTH</name>
+      <value type="dec">32</value>
+    </define>
+    <define>
+      <name>DRAM_SIZE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>INCLUDE_IROM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>TICK_HZ</name>
+      <value type="dec">1000000</value>
+    </define>
+    <define>
+      <name>SYSTEM_CLK_HZ</name>
+      <value type="dec">50000000</value>
+    </define>
+    <define>
+      <name>CORE_CLK_HZ</name>
+      <value type="dec">50000000</value>
+    </define>
+    <define>
+      <name>UART_CLK_HZ</name>
+      <value type="dec">50000000</value>
+    </define>
+    <define>
+      <name>SPI_CLK_HZ</name>
+      <value type="dec">50000000</value>
+    </define>
+    <define>
+      <name>I2C_CLK_HZ</name>
+      <value type="dec">50000000</value>
+    </define>
+    <define>
+      <name>OLED_CLK_HZ</name>
+      <value type="dec">50000000</value>
+    </define>
+    <define>
+      <name>PACT_CLK_HZ</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_UART_READYMADE</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>NUM_SPI_READYMADE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_I2C_READYMADE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_UART_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_SPI_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_I2C_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_LED_CHECKER</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>NUM_AIOIF</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_SWITCH_SLIDE_READYMADE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>INCLUDE_SRAM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_SLOW_DRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_FAST_DRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_SDRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_DDR</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_DRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_BOOT_MODE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_CACHE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_TIMER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_PLIC</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_CORE_JTAG</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_OLED</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_OLED_BW</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_OLED_RGB</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_SPI_FLASH</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_UART_PRINTF</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_OLEDBW_PRINTF</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_FUSE_BOX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_ADC</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_USER_INTERRUPTS</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_ARDUCAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_BLUETOOTH</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_WIFI</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_JPEG_ENCODER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_JPEGLS_ENCODER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_HBC1_TX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_HBC1_RX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_CORE_PERI_GROUP</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_NOC_DEBUG</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_PACT</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_I2S</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_DMA</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_FLORIAN</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_FLORIAN_SP</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_FLORIAN_DP</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_TRAFFIC_GENERATOR</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_LCD_SHIELD</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_GPIO_PINMUX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_EDGE_VIDEO_SYSTEM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_VDMA</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_VIM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_VOM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_HDMI</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_CIS</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_SPI_LCD</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_TCACHING</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_HW_BARRIER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>I2S_SAMPLING_RATE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>I2S_IP_CLK_HZ</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>I2S_MCLK_HZ</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>NOC_FLIT_DIVISOR</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>NUM_TRAFFIC_GENERATOR</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>PLATFORM_NAME</name>
+      <value type="str">RadarPIM</value>
+    </define>
+    <define>
+      <name>INCLUDE_RVC_ROCKET_MEDIUM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>NUM_CORE</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_REAL_CORE</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>CACHE_LINE_SIZE</name>
+      <value type="dec">64</value>
+    </define>
+    <define>
+      <name>IS_CACHEABLE_REGION_FIXED</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>FIXED_CACHEABLE_REGION_SIZE</name>
+      <value type="dec">131072</value>
+    </define>
+    <define>
+      <name>INCLUDE_MULTICORE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>BARRIER_INDEX_FOR_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_BARRIER</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>LOCK_INDEX_FOR_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>LOCK_INDEX_FOR_SYSTEM_VARIABLE</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>LOCK_INDEX_FOR_SYSTEM_HW</name>
+      <value type="dec">3</value>
+    </define>
+    <define>
+      <name>LOCK_INDEX_FOR_PRINTF</name>
+      <value type="dec">4</value>
+    </define>
+    <define>
+      <name>LOCK_INDEX_FOR_SW_BARRIER</name>
+      <value type="dec">5</value>
+    </define>
+    <define>
+      <name>NUM_LOCK</name>
+      <value type="dec">7</value>
+    </define>
+    <define>
+      <name>AUTO_ID_INDEX_FOR_HW_BARRIER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>SPI_INDEX_FOR_READYMADE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>SPI_INDEX_FOR_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>SPI_INDEX_FOR_SYSTEM</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>SPI_INDEX_FOR_OLED</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>SPI_INDEX_FOR_SPI_FLASH</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>NUM_SPI_SYSTEM</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>UART_INDEX_FOR_READYMADE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>UART_INDEX_FOR_USER</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>UART_INDEX_FOR_SYSTEM</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>UART_INDEX_FOR_UART_PRINTF</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>NUM_UART_SYSTEM</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>I2C_INDEX_FOR_READYMADE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>I2C_INDEX_FOR_USER</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>I2C_INDEX_FOR_SYSTEM</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_I2C_SYSTEM</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>GPIO_INDEX_FOR_UWB_RESET</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>NUM_GPIO</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>SRAM_ADDR</name>
+      <value type="hex">0x40080000</value>
+    </define>
+    <define>
+      <name>NUM_UART</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_SPI</name>
+      <value type="dec">2</value>
+    </define>
+    <define>
+      <name>NUM_I2C</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>INCLUDE_CORE_USER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_CORE_TEAM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_LOCK_USER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_LOCK_SYSTEM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_BARRIER_USER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_BARRIER_SYSTEM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_AUTO_ID</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_GLOBAL_TAG</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_UART_READYMADE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_SPI_READYMADE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_I2C_READYMADE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_UART_USER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_SPI_USER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_I2C_USER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_LED_CHECKER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_AIOIF</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_SWITCH_SLIDE_READYMADE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_CORE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_REAL_CORE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_BARRIER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_LOCK</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_SPI_SYSTEM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_UART_SYSTEM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_I2C_SYSTEM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>INCLUDE_GPIO</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_UART</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_SPI</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>INCLUDE_I2C</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>NUM_PREDEFINED_CLOCK</name>
+      <value type="dec">0</value>
+    </define>
+  </info>
+  <info>
+    <name>ssw_info</name>
+    <define>
+      <name>STACK_SIZE</name>
+      <value type="hex">0x2000</value>
+    </define>
+    <define>
+      <name>SRAM_ACTUAL_SIZE</name>
+      <value type="hex">0x40000</value>
+    </define>
+    <define>
+      <name>DRAM_ACTUAL_SIZE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>DATA_ALIGN_SIZE</name>
+      <value type="dec">64</value>
+    </define>
+    <define>
+      <name>PRINTF_USING_UART</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>PRINTF_USING_OLED</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>TEMPORARY_CACHING_HEAP_START</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>TEMPORARY_CACHING_HEAP_SIZE</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>TEMPORARY_CACHING_HEAP_LAST</name>
+      <value type="dec">0</value>
+    </define>
+    <define>
+      <name>USE_DRAM_MANUALLY</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_TCACHING</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_PROFILING</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_HW_BARRIER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SW_BARRIER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_SDRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_VIM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_VOM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_VDMA</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_FLORIAN_SP</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_FLORIAN_DP</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_SIMPLE_GARBAGE_COLLECTOR</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>APP_ADDR</name>
+      <value type="hex">0x40080000</value>
+    </define>
+    <define>
+      <name>USE_IROM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SRAM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SLOW_DRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_FAST_DRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_DDR</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_DRAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_BOOT_MODE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_CACHE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_TIMER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_PLIC</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_CORE_JTAG</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_OLED</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_OLED_BW</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_OLED_RGB</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SPI_FLASH</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_UART_PRINTF</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_OLEDBW_PRINTF</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_FUSE_BOX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_ADC</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_USER_INTERRUPTS</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_ARDUCAM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_BLUETOOTH</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_WIFI</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_JPEG_ENCODER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_JPEGLS_ENCODER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_HBC1_TX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_HBC1_RX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_CORE_PERI_GROUP</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_NOC_DEBUG</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_PACT</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_I2S</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_DMA</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_FLORIAN</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_TRAFFIC_GENERATOR</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_LCD_SHIELD</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_GPIO_PINMUX</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_EDGE_VIDEO_SYSTEM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_HDMI</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_CIS</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_SPI_LCD</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_RVC_ROCKET_MEDIUM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_MULTICORE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_CORE_USER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_CORE_TEAM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_LOCK_USER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_LOCK_SYSTEM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_BARRIER_USER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_BARRIER_SYSTEM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_AUTO_ID</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_GLOBAL_TAG</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_UART_READYMADE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SPI_READYMADE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_I2C_READYMADE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_UART_USER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_SPI_USER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_I2C_USER</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_LED_CHECKER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_AIOIF</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_SWITCH_SLIDE_READYMADE</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_CORE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_REAL_CORE</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_BARRIER</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_LOCK</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SPI_SYSTEM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_UART_SYSTEM</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_I2C_SYSTEM</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>USE_GPIO</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_UART</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_SPI</name>
+      <value type="bool">True</value>
+    </define>
+    <define>
+      <name>USE_I2C</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>NUM_THREAD_PER_TEAM</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>UNCACHEABLE_MEMORY_REGION</name>
+      <value type="text">sram</value>
+    </define>
+    <define>
+      <name>CACHEABLE_MEMORY_REGION</name>
+      <value type="text">sram</value>
+    </define>
+    <define>
+      <name>BIGDATA_MEMORY_REGION</name>
+      <value type="text">sram</value>
+    </define>
+  </info>
+  <info>
+    <name>sim_info</name>
+    <define>
+      <name>SIMULATE_SPI</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>SIMULATE_I2C</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>SIMULATE_SPI_FLASH</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>SIMULATE_SDRAM_BEHAVIOR</name>
+      <value type="bool">False</value>
+    </define>
+    <define>
+      <name>SRAM_IP_INSTANCE</name>
+      <value type="text">i_system_sram</value>
+    </define>
+    <define>
+      <name>SRAM_CELL_VARIABLE_INSIDE_MEMORY_IP</name>
+      <value type="text">i_cell.memory</value>
+    </define>
+    <define>
+      <name>SRAM_CELL_VARIABLE_WIDTH</name>
+      <value type="dec">32</value>
+    </define>
+    <define>
+      <name>NUM_SRAM_CELL</name>
+      <value type="dec">1</value>
+    </define>
+    <define>
+      <name>EXTERNAL_CLK_NAME_00</name>
+      <value type="text">external_clk_0</value>
+    </define>
+  </info>
+  <info>
+    <name>user_info</name>
+  </info>
+  <info>
+    <name>platform_info</name>
+    <include_header>memorymap_info</include_header>
+    <include_header>hw_info</include_header>
+    <include_header>ssw_info</include_header>
+    <include_header>user_info</include_header>
+  </info>
+</rvx>

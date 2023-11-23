@@ -1,0 +1,5 @@
+all:./src
+all:./include
+all:./rvx_src
+all:./rvx_include
+all:../../user/api

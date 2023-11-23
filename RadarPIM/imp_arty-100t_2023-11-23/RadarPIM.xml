@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<rvx>
+	<platform>
+		<name>RadarPIM</name>
+		<status>described</status>
+		<spec>
+			<define>
+				<name>num_core_user</name>
+				<value>2</value>
+			</define>
+			<define>
+				<name>num_lock_user</name>
+				<value>2</value>
+			</define>
+			<define>
+				<name>num_barrier_user</name>
+				<value>2</value>
+			</define>
+			<define>
+				<name>sram_size</name>
+				<value>256kB</value>
+			</define>
+			<define>
+				<name>include_slow_dram</name>
+				<value>False</value>
+			</define>
+			<define>
+				<name>num_spi_readymade</name>
+				<value>0</value>
+			</define>
+			<define>
+				<name>num_i2c_readymade</name>
+				<value>0</value>
+			</define>
+			<define>
+				<name>num_uart_readymade</name>
+				<value>1</value>
+			</define>
+			<define>
+				<name>include_timer</name>
+				<value type="bool">True</value>
+			</define>
+			<define>
+				<name>include_oled_rgb</name>
+				<value type="bool">True</value>
+			</define>
+			<define>
+				<name>include_spi_flash</name>
+				<value type="bool">True</value>
+			</define>
+			<define>
+				<name>num_led_checker</name>
+				<value>1</value>
+			</define>
+		</spec>
+		<ip_instance>
+			<name>i_main_core</name>
+			<library_name>rvc_rocket_medium</library_name>
+		</ip_instance>
+		
+		<ip_instance>
+			<name>i_test1</name>
+			<library_name>user_slaveif_axi_clkin</library_name>
+			<parameter>
+				<id>SIZE_OF_MEMORYMAP</id>
+				<value>512kB</value>
+			</parameter>
+			<parameter>
+				<id>BW_ADDR</id>
+				<value>32</value>
+			</parameter>
+			<parameter>
+				<id>BW_DATA</id>
+				<value>32</value>
+			</parameter>
+		</ip_instance>
+
+    <gpio>
+      <name>uwb_reset</name>
+      <width>1</width>
+    </gpio>
+		
+	</platform>
+</rvx>
+

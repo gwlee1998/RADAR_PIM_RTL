@@ -1,0 +1,11 @@
+include ${MUNOC_HW_HOME}/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/platform_controller/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/core_peri_group/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/common_peri_group/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/external_peri_group/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/core/rocket_medium/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/timer/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/checker/env/set_sim_env.mh
+include ${RVX_HWLIB_HOME}/peripheral/dma/env/set_sim_env.mh
+SRC_DIR_LIST += ${PLATFORM_DIR}/arch/rtl/src
+INC_DIR_LIST += ${PLATFORM_DIR}/arch/rtl/include

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<rvx>
+  <dec_ip>
+    <name>RadarPIM_clock_pll_0_00</name>
+    <library_name>clock_pll_0</library_name>
+    <clock_info>
+      <define>
+        <name>clk_system</name>
+        <value type="dec">50000000</value>
+      </define>
+    </clock_info>
+  </dec_ip>
+  <dec_ip>
+    <name>RadarPIM_sram_01</name>
+    <library_name>sram</library_name>
+    <parameter>
+      <id>CAPACITY</id>
+      <value type="dec">262144</value>
+    </parameter>
+    <parameter>
+      <id>CELL_SIZE</id>
+      <value type="dec">262144</value>
+    </parameter>
+    <parameter>
+      <id>BW_ADDR</id>
+      <value type="dec">32</value>
+    </parameter>
+    <parameter>
+      <id>BW_DATA</id>
+      <value type="dec">32</value>
+    </parameter>
+    <parameter>
+      <id>BW_AXI_TID</id>
+      <value type="text">`REQUIRED_BW_OF_SLAVE_TID</value>
+    </parameter>
+    <parameter>
+      <id>CELL_WIDTH</id>
+      <value type="dec">32</value>
+    </parameter>
+  </dec_ip>
+</rvx>

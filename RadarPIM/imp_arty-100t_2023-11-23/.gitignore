@@ -1,0 +1,7 @@
+set_path.tcl
+*.hex
+run_*.tcl
+program_*.tcl
+*.log
+*.jou
+.Xil

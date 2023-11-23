@@ -1,0 +1,34 @@
+#ifndef __FRVP_PLIC_MEMORYMAP_OFFSET_H__
+#define __FRVP_PLIC_MEMORYMAP_OFFSET_H__
+
+
+
+// total
+#define BW_MMAP_OFFSET_FRVP_PLIC None
+#define FRVP_PLIC_ADDR_INTERVAL 8
+#define BW_UNUSED_FRVP_PLIC 3
+#define NUM_FRVP_PLIC_SUBMODULE 0
+
+// reg plic_index
+#define BW_PLIC_INDEX 5
+#define PLIC_INDEX_GPIO 0
+#define PLIC_INDEX_USER 16
+#define PLIC_INDEX_WIFI 20
+#define PLIC_INDEX_SPI 21
+#define PLIC_INDEX_HBC1 22
+#define PLIC_INDEX_I2S 23
+#define PLIC_INDEX_I2C 24
+#define PLIC_INDEX_UART 28
+
+// reg num_plic_source
+#define BW_NUM_PLIC_SOURCE 5
+#define NUM_PLIC_SOURCE_GPIO 16
+#define NUM_PLIC_SOURCE_USER 4
+#define NUM_PLIC_SOURCE_WIFI 1
+#define NUM_PLIC_SOURCE_SPI 1
+#define NUM_PLIC_SOURCE_HBC1 1
+#define NUM_PLIC_SOURCE_I2S 1
+#define NUM_PLIC_SOURCE_I2C 1
+#define NUM_PLIC_SOURCE_UART 3
+
+#endif

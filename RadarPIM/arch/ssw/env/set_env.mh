@@ -1,0 +1,15 @@
+INCLUDES += -I${RVX_SSW_HOME}/memorymap
+INCLUDES += -I${PLATFORM_DIR}/arch/ssw/include
+-include ${RVX_SSW_HOME}/core/rocket_medium/set_env.mh
+-include ${RVX_SSW_HOME}/system_utility/env/set_env.mh
+-include ${RVX_SSW_HOME}/utility/env/set_env.mh
+-include ${RVX_SSW_HOME}/uthash/env/set_env.mh
+-include ${RVX_SSW_HOME}/image/env/set_env.mh
+-include ${RVX_SSW_HOME}/matrix/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/munoc/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/platform_controller/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/core_peri_group/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/external_peri_group/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/timer/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/oled_rgb/env/set_env.mh
+-include ${RVX_SSW_HOME}/api/dma/env/set_env.mh

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "RadarPIM",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"myrand.h": "c",
+			"stdint.h": "c"
+		}
+	}
+}

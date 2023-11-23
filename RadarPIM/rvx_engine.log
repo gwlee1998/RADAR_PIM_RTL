@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<rvx_log>
+  <date>2023-11-23 09:58:33</date>
+  <rvx_job name="logfile_setup" status="done" is_local="True" is_file="False" is_user="False"/>
+  <rvx_job name="fpga_name_check" status="done" is_local="True" is_file="False" is_user="True"/>
+  <rvx_job name="engine" status="done" is_local="True" is_file="False" is_user="False"/>
+</rvx_log>

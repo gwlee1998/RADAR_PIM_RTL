@@ -1,0 +1,56 @@
+// ****************************************************************************
+// ****************************************************************************
+// Copyright SoC Design Research Group, All rights reserved.
+// Electronics and Telecommunications Research Institute (ETRI)
+// 
+// THESE DOCUMENTS CONTAIN CONFIDENTIAL INFORMATION AND KNOWLEDGE
+// WHICH IS THE PROPERTY OF ETRI. NO PART OF THIS PUBLICATION IS
+// TO BE USED FOR ANY OTHER PURPOSE, AND THESE ARE NOT TO BE
+// REPRODUCED, COPIED, DISCLOSED, TRANSMITTED, STORED IN A RETRIEVAL
+// SYSTEM OR TRANSLATED INTO ANY OTHER HUMAN OR COMPUTER LANGUAGE,
+// IN ANY FORM, BY ANY MEANS, IN WHOLE OR IN PART, WITHOUT THE
+// COMPLETE PRIOR WRITTEN PERMISSION OF ETRI.
+// ****************************************************************************
+// 2018-03-28
+// Kyuseung Han (han@etri.re.kr)
+// ****************************************************************************
+// ****************************************************************************
+
+#ifndef __ERVP_VDMA_MEMORYMAP_H__
+#define __ERVP_VDMA_MEMORYMAP_H__
+
+// vdma
+#define BW_MMAP_OFFSET_VDMA (6)
+#define MMAP_SUBOFFSET_VDMA_CMD (0x0)
+#define MMAP_SUBOFFSET_VDMA_STATUS (0x4)
+#define MMAP_SUBOFFSET_VDMA_SRC_ADDR (0x8)
+#define MMAP_SUBOFFSET_VDMA_DST_ADDR (0xc)
+#define MMAP_SUBOFFSET_VDMA_SIZE (0x10)
+#define MMAP_SUBOFFSET_VDMA_COUNT (0x14)
+#define MMAP_SUBOFFSET_VDMA_SRC_STRIDE (0x18)
+#define MMAP_SUBOFFSET_VDMA_DST_STRIDE (0x1c)
+#define MMAP_SUBOFFSET_VDMA_PERIOD (0x20)
+
+#define MMAP_OFFSET_VDMA_CMD (MMAP_SUBOFFSET_VDMA_CMD)
+#define MMAP_OFFSET_VDMA_STATUS (MMAP_SUBOFFSET_VDMA_STATUS)
+#define MMAP_OFFSET_VDMA_SRC_ADDR (MMAP_SUBOFFSET_VDMA_SRC_ADDR)
+#define MMAP_OFFSET_VDMA_DST_ADDR (MMAP_SUBOFFSET_VDMA_DST_ADDR)
+#define MMAP_OFFSET_VDMA_SIZE (MMAP_SUBOFFSET_VDMA_SIZE)
+#define MMAP_OFFSET_VDMA_COUNT (MMAP_SUBOFFSET_VDMA_COUNT)
+#define MMAP_OFFSET_VDMA_SRC_STRIDE (MMAP_SUBOFFSET_VDMA_SRC_STRIDE)
+#define MMAP_OFFSET_VDMA_DST_STRIDE (MMAP_SUBOFFSET_VDMA_DST_STRIDE)
+#define MMAP_OFFSET_VDMA_PERIOD (MMAP_SUBOFFSET_VDMA_PERIOD)
+
+#define BW_VDMA_CMD (2)
+#define VDMA_CMD_STOP (0)
+#define VDMA_CMD_ONCE (1)
+#define VDMA_CMD_PERIODIC (2)
+
+#define BW_VDMA_STATUS (3)
+#define VDMA_STATUS_IDLE (0)
+#define VDMA_STATUS_RUN_ALL (1)
+#define VDMA_STATUS_RUN_WADDR (2)
+#define VDMA_STATUS_WAIT_END (3)
+#define VDMA_STATUS_WAIT_PERIODIC (4)
+
+#endif

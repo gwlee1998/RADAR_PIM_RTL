@@ -1,0 +1,29 @@
+#ifndef __ERVP_FUSE_BOX_MEMORYMAP_H__
+#define __ERVP_FUSE_BOX_MEMORYMAP_H__
+
+#include "platform_info.h"
+#include "ervp_fuse_box_memorymap_offset.h"
+
+
+// submodule fuse_box
+#define MMAP_FUSE_BOX_CORE_CLOCK_CMD (FUSE_BOX_CONTROL_BASEADDR+MMAP_OFFSET_FUSE_BOX_CORE_CLOCK_CMD)
+#define MMAP_FUSE_BOX_USER_CLOCK_CMD (FUSE_BOX_CONTROL_BASEADDR+MMAP_OFFSET_FUSE_BOX_USER_CLOCK_CMD)
+#define MMAP_FUSE_BOX_SYSTEM_CMD (FUSE_BOX_CONTROL_BASEADDR+MMAP_OFFSET_FUSE_BOX_SYSTEM_CMD)
+
+// reg fuse_box.core_clock_cmd
+// BW_FUSE_BOX_CORE_CLOCK_CMD 32
+
+// reg fuse_box.user_clock_cmd
+// BW_FUSE_BOX_USER_CLOCK_CMD 32
+
+// reg fuse_box.system_cmd
+// BW_FUSE_BOX_SYSTEM_CMD 32
+
+// reg clock_cmd
+// BW_CLOCK_CMD 3
+// CLOCK_CMD_WAKEUP 0
+// CLOCK_CMD_SLEEP 1
+// CLOCK_CMD_DISABLE 3
+// CLOCK_CMD_WFI 5
+
+#endif

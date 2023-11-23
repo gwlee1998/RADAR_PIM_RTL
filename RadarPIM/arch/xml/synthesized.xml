@@ -1,0 +1,1767 @@
+<?xml version="1.0" ?>
+<rvx>
+  <platform>
+    <name>RadarPIM</name>
+    <status>synthesized</status>
+    <spec>
+      <define>
+        <name>num_core_user</name>
+        <value type="dec">2</value>
+      </define>
+      <define>
+        <name>num_lock_user</name>
+        <value type="dec">2</value>
+      </define>
+      <define>
+        <name>num_barrier_user</name>
+        <value type="dec">2</value>
+      </define>
+      <define>
+        <name>sram_size</name>
+        <value type="hex">0x40000</value>
+      </define>
+      <define>
+        <name>include_slow_dram</name>
+        <value type="bool">False</value>
+      </define>
+      <define>
+        <name>num_spi_readymade</name>
+        <value type="dec">0</value>
+      </define>
+      <define>
+        <name>num_i2c_readymade</name>
+        <value type="dec">0</value>
+      </define>
+      <define>
+        <name>num_uart_readymade</name>
+        <value type="dec">1</value>
+      </define>
+      <define>
+        <name>include_timer</name>
+        <value type="bool">True</value>
+      </define>
+      <define>
+        <name>include_oled_rgb</name>
+        <value type="bool">True</value>
+      </define>
+      <define>
+        <name>include_spi_flash</name>
+        <value type="bool">True</value>
+      </define>
+      <define>
+        <name>num_led_checker</name>
+        <value type="dec">1</value>
+      </define>
+      <define>
+        <name>include_fast_dram</name>
+        <value type="bool">False</value>
+      </define>
+      <define>
+        <name>include_oled</name>
+        <value type="bool">True</value>
+      </define>
+      <define>
+        <name>include_boot_mode</name>
+        <value type="bool">True</value>
+      </define>
+      <define>
+        <name>sram_cell_size</name>
+        <value type="hex">0x40000</value>
+      </define>
+      <define>
+        <name>sram_cell_width</name>
+        <value type="dec">32</value>
+      </define>
+      <define>
+        <name>sram_port_width</name>
+        <value type="dec">32</value>
+      </define>
+      <define>
+        <name>include_core_peri_group</name>
+        <value type="bool">True</value>
+      </define>
+    </spec>
+    <ip_instance>
+      <name>i_main_core</name>
+      <library_name>rvc_rocket_medium</library_name>
+      <domain>gclk_process_000</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_test1</name>
+      <library_name>user_slaveif_axi_clkin</library_name>
+      <parameter>
+        <id>SIZE_OF_MEMORYMAP</id>
+        <value type="hex">0x80000</value>
+      </parameter>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>i_sub_core_001</name>
+      <library_name>rvc_rocket_medium_sub</library_name>
+      <domain>gclk_process_001</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_led</name>
+      <library_name>led_checker</library_name>
+      <parameter>
+        <id>NUM_LED</id>
+        <value type="dec">1</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>i_gpio_uwb_reset</name>
+      <library_name>gpio</library_name>
+      <parameter>
+        <id>BW_GPIO</id>
+        <value type="dec">1</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>i_pll0</name>
+      <library_name>clock_pll_0</library_name>
+      <clock_info>
+        <define>
+          <name>clk_system</name>
+          <value type="dec">50000000</value>
+        </define>
+      </clock_info>
+    </ip_instance>
+    <ip_instance>
+      <name>i_system_sram</name>
+      <library_name>sram</library_name>
+      <parameter>
+        <id>CAPACITY</id>
+        <value type="dec">262144</value>
+      </parameter>
+      <parameter>
+        <id>CELL_SIZE</id>
+        <value type="dec">262144</value>
+      </parameter>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_AXI_TID</id>
+        <value type="text">`REQUIRED_BW_OF_SLAVE_TID</value>
+      </parameter>
+      <parameter>
+        <id>CELL_WIDTH</id>
+        <value type="dec">32</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>common_peri_group</name>
+      <library_name>common_peri_group</library_name>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>autoname_62</name>
+      <library_name>tick_generator</library_name>
+    </ip_instance>
+    <ip_instance>
+      <name>autoname_64</name>
+      <library_name>real_clock</library_name>
+    </ip_instance>
+    <ip_instance>
+      <library_name>external_peri_group</library_name>
+      <name>external_peri_group</name>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <library_name>core_peri_group</library_name>
+      <domain>gclk_process_000</domain>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>PROCESS_ID</id>
+        <value type="dec">0</value>
+      </parameter>
+      <interface>
+        <name>no_name</name>
+        <comm_type>memory:all</comm_type>
+      </interface>
+      <name>core_peri_group</name>
+    </ip_instance>
+    <ip_instance>
+      <library_name>core_peri_group</library_name>
+      <domain>gclk_process_001</domain>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>PROCESS_ID</id>
+        <value type="dec">1</value>
+      </parameter>
+      <interface>
+        <name>no_name</name>
+        <comm_type>local_memory_#</comm_type>
+      </interface>
+      <name>autoname_65</name>
+    </ip_instance>
+    <ip_instance>
+      <library_name>platform_controller</library_name>
+      <name>platform_controller</name>
+      <parameter>
+        <id>BW_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>NUM_RESET</id>
+        <value type="dec">8</value>
+      </parameter>
+      <parameter>
+        <id>NUM_AUTO_RESET</id>
+        <value type="dec">4</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>default_slave</name>
+      <library_name>default_slave</library_name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_DEFAULT_SLAVE</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+    </ip_instance>
+    <ip_instance>
+      <name>i_mnim_i_main_core_no_name</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_MNIM_I_MAIN_CORE_NO_NAME</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>LOCAL_ENABLE</id>
+        <value type="dec">1</value>
+      </parameter>
+      <parameter>
+        <id>LOCAL_UPPER_ADDR</id>
+        <value type="text">4'h F</value>
+      </parameter>
+      <library_name>mni_axi_synch</library_name>
+      <domain>gclk_process_000</domain>
+      <interface>
+        <name>local</name>
+        <comm_type>local_memory_#</comm_type>
+      </interface>
+      <signal>
+        <name>local_allows_holds</name>
+        <comm_type>local_allows_holds_#</comm_type>
+      </signal>
+    </ip_instance>
+    <ip_instance>
+      <name>i_mnim_i_sub_core_001_no_name</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_MNIM_I_SUB_CORE_001_NO_NAME</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>LOCAL_ENABLE</id>
+        <value type="dec">1</value>
+      </parameter>
+      <parameter>
+        <id>LOCAL_UPPER_ADDR</id>
+        <value type="text">4'h F</value>
+      </parameter>
+      <library_name>mni_axi_synch</library_name>
+      <domain>gclk_process_001</domain>
+      <interface>
+        <name>local</name>
+        <comm_type>local_memory_#</comm_type>
+      </interface>
+      <signal>
+        <name>local_allows_holds</name>
+        <comm_type>local_allows_holds_#</comm_type>
+      </signal>
+    </ip_instance>
+    <ip_instance>
+      <name>i_mnim_platform_controller_master</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_MNIM_PLATFORM_CONTROLLER_MASTER</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <library_name>mni_ahbm_synch</library_name>
+      <domain>clk_system</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_snim_i_test1_slave</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_SNIM_I_TEST1_SLAVE</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <library_name>sni_axi_synch</library_name>
+      <domain>gclk_noc</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_snim_i_system_sram_no_name</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_SNIM_I_SYSTEM_SRAM_NO_NAME</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <library_name>sni_axi_synch</library_name>
+      <domain>gclk_noc</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_snim_common_peri_group_no_name</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_SNIM_COMMON_PERI_GROUP_NO_NAME</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <library_name>sni_apb_synch</library_name>
+      <domain>clk_system</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_snim_external_peri_group_no_name</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_SNIM_EXTERNAL_PERI_GROUP_NO_NAME</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <library_name>sni_apb_synch</library_name>
+      <domain>gclk_system_external</domain>
+    </ip_instance>
+    <ip_instance>
+      <name>i_snim_platform_controller_no_name</name>
+      <parameter>
+        <id>NODE_ID</id>
+        <value type="text">`NODE_ID_I_SNIM_PLATFORM_CONTROLLER_NO_NAME</value>
+      </parameter>
+      <parameter>
+        <id>BW_FNI_PHIT</id>
+        <value type="text">BW_FNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_BNI_PHIT</id>
+        <value type="text">BW_BNI_PHIT</value>
+      </parameter>
+      <parameter>
+        <id>BW_PLATFORM_ADDR</id>
+        <value type="dec">32</value>
+      </parameter>
+      <parameter>
+        <id>BW_NODE_DATA</id>
+        <value type="dec">32</value>
+      </parameter>
+      <library_name>sni_apb_synch</library_name>
+      <domain>clk_system</domain>
+    </ip_instance>
+    <signal>
+      <name>boot_mode</name>
+      <width type="text">`BW_BOOT_MODE</width>
+      <port>input</port>
+      <comm_type>boot_mode</comm_type>
+    </signal>
+    <signal>
+      <name>clk_system</name>
+      <width type="dec">1</width>
+      <comm_type>clk_system</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_core</name>
+      <width type="dec">1</width>
+      <comm_type>clk_core</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_system_external</name>
+      <width type="dec">1</width>
+      <comm_type>clk_system_external</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_system_debug</name>
+      <width type="dec">1</width>
+      <comm_type>clk_system_debug</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_local_access</name>
+      <width type="dec">1</width>
+      <comm_type>clk_local_access</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_process_000</name>
+      <width type="dec">1</width>
+      <comm_type>clk_process_000</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_process_001</name>
+      <width type="dec">1</width>
+      <comm_type>clk_process_001</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>clk_noc</name>
+      <width type="dec">1</width>
+      <comm_type>clk_noc</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>external_clk_0</name>
+      <port>input</port>
+      <width type="dec">1</width>
+    </signal>
+    <signal>
+      <name>gclk_system</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_system</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_core</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_core</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_system_external</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_system_external</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_system_debug</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_system_debug</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_local_access</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_local_access</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_process_000</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_process_000</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_process_001</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_process_001</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>gclk_noc</name>
+      <width type="dec">1</width>
+      <comm_type>gclk_noc</comm_type>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>tick_1us</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>tick_62d5ms</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>tick_gpio</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>autoname_63</name>
+      <width type="dec">1</width>
+      <comm_type>tick_timer</comm_type>
+    </signal>
+    <signal>
+      <name>external_rstnn</name>
+      <width type="dec">1</width>
+      <port>input</port>
+      <comm_type>external_rstnn</comm_type>
+    </signal>
+    <signal>
+      <name>global_rstnn</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>global_rstpp</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>rstnn_seqeunce</name>
+      <width type="dec">8</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>rstpp_seqeunce</name>
+      <width type="dec">8</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>rstnn_user</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>rstpp_user</name>
+      <width type="dec">1</width>
+      <user_available/>
+    </signal>
+    <signal>
+      <name>rstnn_noc</name>
+      <width type="dec">1</width>
+      <comm_type>rstnn_noc</comm_type>
+    </signal>
+    <signal>
+      <name>led</name>
+      <width type="dec">1</width>
+      <port>output</port>
+      <array type="text">1</array>
+    </signal>
+    <has_user_region/>
+    <gpio_list>
+      <gpio>
+        <name>uwb_reset</name>
+        <width type="dec">1</width>
+      </gpio>
+    </gpio_list>
+    <interface>
+      <name>uwb_reset</name>
+      <library_name>tristate_oe</library_name>
+      <parameter>
+        <id>bw_data</id>
+        <value type="dec">1</value>
+      </parameter>
+      <role>sender</role>
+      <sync/>
+      <init/>
+      <tristate_info>
+        <id/>
+        <library_name>tristate_oe</library_name>
+        <parameter>
+          <id>bw_data</id>
+          <value type="dec">1</value>
+        </parameter>
+      </tristate_info>
+    </interface>
+    <interface>
+      <name>olede</name>
+      <library_name>olede</library_name>
+      <role>sender</role>
+      <hdl_prefix>oled_</hdl_prefix>
+      <sync>None</sync>
+      <init>None</init>
+    </interface>
+    <interface>
+      <name>pjtag</name>
+      <library_name>jtag</library_name>
+      <role>receiver</role>
+      <sync>None</sync>
+      <init>None</init>
+    </interface>
+    <connect>
+      <input>i_gpio_uwb_reset/gpio</input>
+      <output>uwb_reset</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>clk_core</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>clk_system_external</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>clk_system_debug</output>
+    </connect>
+    <connect>
+      <input>clk_core</input>
+      <output>clk_local_access</output>
+    </connect>
+    <connect>
+      <input>clk_core</input>
+      <output>clk_process_000</output>
+    </connect>
+    <connect>
+      <input>clk_core</input>
+      <output>clk_process_001</output>
+    </connect>
+    <connect>
+      <input>clk_core</input>
+      <output>clk_noc</output>
+    </connect>
+    <connect>
+      <input>external_clk_0</input>
+      <output>i_pll0/external_clk</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>gclk_system</output>
+    </connect>
+    <connect>
+      <input>clk_core</input>
+      <output>gclk_core</output>
+    </connect>
+    <connect>
+      <input>clk_system_external</input>
+      <output>gclk_system_external</output>
+    </connect>
+    <connect>
+      <input>clk_system_debug</input>
+      <output>gclk_system_debug</output>
+    </connect>
+    <connect>
+      <input>clk_local_access</input>
+      <output>gclk_local_access</output>
+    </connect>
+    <connect>
+      <input>clk_process_000</input>
+      <output>gclk_process_000</output>
+    </connect>
+    <connect>
+      <input>clk_process_001</input>
+      <output>gclk_process_001</output>
+    </connect>
+    <connect>
+      <input>clk_noc</input>
+      <output>gclk_noc</output>
+    </connect>
+    <connect>
+      <input>autoname_62/tick_1us</input>
+      <output>tick_1us</output>
+    </connect>
+    <connect>
+      <input>autoname_62/tick_62d5ms</input>
+      <output>tick_62d5ms</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/tick_gpio</input>
+      <output>tick_gpio</output>
+    </connect>
+    <connect>
+      <input>tick_1us</input>
+      <output>autoname_63</output>
+    </connect>
+    <connect>
+      <input>platform_controller/global_rstnn</input>
+      <output>global_rstnn</output>
+    </connect>
+    <connect>
+      <input>platform_controller/global_rstpp</input>
+      <output>global_rstpp</output>
+    </connect>
+    <connect>
+      <input>platform_controller/rstnn_seqeunce</input>
+      <output>rstnn_seqeunce</output>
+    </connect>
+    <connect>
+      <input>platform_controller/rstpp_seqeunce</input>
+      <output>rstpp_seqeunce</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[1]</input>
+      <output>i_led/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[1]</input>
+      <output>i_system_sram/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[1]</input>
+      <output>common_peri_group/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[1]</input>
+      <output>autoname_62/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[2]</input>
+      <output>autoname_64/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[2]</input>
+      <output>external_peri_group/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[2]</input>
+      <output>core_peri_group/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[2]</input>
+      <output>autoname_65/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[3]</input>
+      <output>platform_controller/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[3]</input>
+      <output>default_slave/rstnn_network</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[3]</input>
+      <output>default_slave/rstnn_debug</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[4]</input>
+      <output>i_gpio_uwb_reset/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[5]</input>
+      <output>i_test1/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[6]</input>
+      <output>i_main_core/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[7]</input>
+      <output>i_sub_core_001/rstnn</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[3]</input>
+      <output>rstnn_user</output>
+    </connect>
+    <connect>
+      <input>rstpp_seqeunce[3]</input>
+      <output>rstpp_user</output>
+    </connect>
+    <connect>
+      <input>gclk_system_external</input>
+      <output>i_led/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_system_external</input>
+      <output>external_peri_group/clk</output>
+    </connect>
+    <connect>
+      <input>i_pll0/clk_system</input>
+      <output>clk_system</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>i_gpio_uwb_reset/clk</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>common_peri_group/clk</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>autoname_62/clk</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>autoname_64/clk</output>
+    </connect>
+    <connect>
+      <input>clk_system</input>
+      <output>platform_controller/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_local_access</input>
+      <output>core_peri_group/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_local_access</input>
+      <output>autoname_65/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_system_debug</input>
+      <output>default_slave/clk_debug</output>
+    </connect>
+    <connect>
+      <input>gclk_process_000</input>
+      <output>i_main_core/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_process_001</input>
+      <output>i_sub_core_001/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_seqeunce[1]</input>
+      <output>rstnn_noc</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>RadarPIM_network_0/i_system_router/rstnn</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>RadarPIM_network_0/i_system_router/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_test1/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_system_sram/clk</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>default_slave/clk_network</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_mnim_i_main_core_no_name/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_mnim_i_main_core_no_name/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_main_core/no_name</input>
+      <output>i_mnim_i_main_core_no_name/ipif</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_mnim_i_sub_core_001_no_name/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_mnim_i_sub_core_001_no_name/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_sub_core_001/no_name</input>
+      <output>i_mnim_i_sub_core_001_no_name/ipif</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_mnim_platform_controller_master/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_mnim_platform_controller_master/rstnn</output>
+    </connect>
+    <connect>
+      <input>platform_controller/master</input>
+      <output>i_mnim_platform_controller_master/ipif</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_snim_i_test1_slave/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_snim_i_test1_slave/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_snim_i_test1_slave/ipif</input>
+      <output>i_test1/slave</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_snim_i_system_sram_no_name/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_snim_i_system_sram_no_name/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_snim_i_system_sram_no_name/ipif</input>
+      <output>i_system_sram/no_name</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_snim_common_peri_group_no_name/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_snim_common_peri_group_no_name/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_snim_common_peri_group_no_name/ipif</input>
+      <output>common_peri_group/no_name</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_snim_external_peri_group_no_name/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_snim_external_peri_group_no_name/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_snim_external_peri_group_no_name/ipif</input>
+      <output>external_peri_group/no_name</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>i_snim_platform_controller_no_name/clk</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>i_snim_platform_controller_no_name/rstnn</output>
+    </connect>
+    <connect>
+      <input>i_snim_platform_controller_no_name/ipif</input>
+      <output>platform_controller/no_name</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_main_core_no_name/ni</input>
+      <output>RadarPIM_network_0/i_system_router/ni_slave(0)</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_sub_core_001_no_name/ni</input>
+      <output>RadarPIM_network_0/i_system_router/ni_slave(1)</output>
+    </connect>
+    <connect>
+      <input>i_mnim_platform_controller_master/ni</input>
+      <output>RadarPIM_network_0/i_system_router/ni_slave(2)</output>
+    </connect>
+    <connect>
+      <input>RadarPIM_network_0/i_system_router/ni_master(0)</input>
+      <output>i_snim_i_test1_slave/ni</output>
+    </connect>
+    <connect>
+      <input>RadarPIM_network_0/i_system_router/ni_master(1)</input>
+      <output>i_snim_i_system_sram_no_name/ni</output>
+    </connect>
+    <connect>
+      <input>RadarPIM_network_0/i_system_router/ni_master(2)</input>
+      <output>i_snim_common_peri_group_no_name/ni</output>
+    </connect>
+    <connect>
+      <input>RadarPIM_network_0/i_system_router/ni_master(3)</input>
+      <output>i_snim_external_peri_group_no_name/ni</output>
+    </connect>
+    <connect>
+      <input>RadarPIM_network_0/i_system_router/ni_master(4)</input>
+      <output>i_snim_platform_controller_no_name/ni</output>
+    </connect>
+    <connect>
+      <input>RadarPIM_network_0/i_system_router/ni_master(5)</input>
+      <output>default_slave/ni</output>
+    </connect>
+    <connect>
+      <input>i_main_core/pc</input>
+      <output>platform_controller/pc(0)</output>
+    </connect>
+    <connect>
+      <input>i_sub_core_001/pc</input>
+      <output>platform_controller/pc(1)</output>
+    </connect>
+    <connect>
+      <input>autoname_62/tick_62d5ms</input>
+      <output>i_led/tick_62d5ms</output>
+    </connect>
+    <connect>
+      <input>platform_controller/app_finished</input>
+      <output>i_led/app_finished</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/tick_gpio</input>
+      <output>i_gpio_uwb_reset/tick_gpio</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/gpio(`GPIO_INDEX_FOR_UWB_RESET)</input>
+      <output>i_gpio_uwb_reset/mmio</output>
+    </connect>
+    <connect>
+      <input>platform_controller/global_rstnn</input>
+      <output>i_pll0/external_rstnn</output>
+    </connect>
+    <connect>
+      <input>common_peri_group/lock_status_list</input>
+      <output>core_peri_group/lock_status_list</output>
+    </connect>
+    <connect>
+      <input>common_peri_group/lock_status_list</input>
+      <output>autoname_65/lock_status_list</output>
+    </connect>
+    <connect>
+      <input>autoname_64/real_clock</input>
+      <output>common_peri_group/real_clock</output>
+    </connect>
+    <connect>
+      <input>common_peri_group/global_tag_list</input>
+      <output>core_peri_group/global_tag_list</output>
+    </connect>
+    <connect>
+      <input>common_peri_group/global_tag_list</input>
+      <output>autoname_65/global_tag_list</output>
+    </connect>
+    <connect>
+      <input>common_peri_group/system_tick_config</input>
+      <output>autoname_62/tick_config</output>
+    </connect>
+    <connect>
+      <input>autoname_62/tick_1us</input>
+      <output>autoname_64/tick_1us</output>
+    </connect>
+    <connect>
+      <input>autoname_62/tick_1us</input>
+      <output>external_peri_group/tick_1us</output>
+    </connect>
+    <connect>
+      <input>autoname_63</input>
+      <output>core_peri_group/tick_1us</output>
+    </connect>
+    <connect>
+      <input>autoname_63</input>
+      <output>autoname_65/tick_1us</output>
+    </connect>
+    <connect>
+      <input>external_rstnn</input>
+      <output>platform_controller/external_rstnn</output>
+    </connect>
+    <connect>
+      <input>boot_mode</input>
+      <output>platform_controller/boot_mode</output>
+    </connect>
+    <connect>
+      <input>`JTAG_SELECT_NOC</input>
+      <output>platform_controller/jtag_select</output>
+    </connect>
+    <connect>
+      <input>1'b 1</input>
+      <output>platform_controller/initialized</output>
+    </connect>
+    <connect>
+      <input>platform_controller/noc_debug</input>
+      <output>default_slave/debug</output>
+    </connect>
+    <connect>
+      <input>core_peri_group/core_interrupt_vector</input>
+      <output>i_main_core/interrupt_vector</output>
+    </connect>
+    <connect>
+      <input>autoname_65/core_interrupt_vector</input>
+      <output>i_sub_core_001/interrupt_vector</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_main_core_no_name/local_allows_holds</input>
+      <output>core_peri_group/allows_holds</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_sub_core_001_no_name/local_allows_holds</input>
+      <output>autoname_65/allows_holds</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_main_core_no_name/local</input>
+      <output>core_peri_group/no_name</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_sub_core_001_no_name/local</input>
+      <output>autoname_65/no_name</output>
+    </connect>
+    <connect>
+      <input>i_led/led</input>
+      <output>led</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/olede</input>
+      <output>olede</output>
+    </connect>
+    <connect>
+      <input>pjtag</input>
+      <output>platform_controller/pjtag</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>external_peri_group/user_pinout_list</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/user_pinin_list</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_core</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_system_external</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_system_debug</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_local_access</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_process_000</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_process_001</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>clk_noc</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>gclk_system</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>gclk_core</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>gclk_noc</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_main_core/interrupt_out</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_sub_core_001/interrupt_out</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>common_peri_group/core_tick_config</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/uart_interrupts</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/spi_interrupt</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/i2c_interrupts</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/gpio_interrupts</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/wifi_interrupt</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>external_peri_group/wifie</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>default_slave/comm_disable</output>
+    </connect>
+    <connect>
+      <input>core_peri_group/delay_notice</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>autoname_65/delay_notice</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>core_peri_group/plic_interrupt</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>autoname_65/plic_interrupt</output>
+    </connect>
+    <connect>
+      <input>platform_controller/global_rstpp</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>default_slave/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_main_core_no_name/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_mnim_i_sub_core_001_no_name/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_mnim_platform_controller_master/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_snim_i_test1_slave/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_snim_i_system_sram_no_name/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_snim_common_peri_group_no_name/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_snim_external_peri_group_no_name/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>i_snim_platform_controller_no_name/svri</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>rstnn_noc</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>core_peri_group/tcu</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>autoname_65/tcu</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>core_peri_group/florian</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>autoname_65/florian</input>
+      <output>`NOT_CONNECT</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_mnim_i_main_core_no_name/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_mnim_i_sub_core_001_no_name/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_mnim_platform_controller_master/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_snim_common_peri_group_no_name/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_snim_platform_controller_no_name/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_snim_i_test1_slave/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_snim_i_system_sram_no_name/comm_disable</output>
+    </connect>
+    <connect>
+      <input>`NOT_CONNECT</input>
+      <output>i_snim_external_peri_group_no_name/comm_disable</output>
+    </connect>
+    <clock_info>
+      <define>
+        <name>clk_system</name>
+        <value type="dec">50000000</value>
+      </define>
+      <define>
+        <name>clk_core</name>
+        <value type="equal">clk_system</value>
+      </define>
+      <define>
+        <name>clk_system_external</name>
+        <value type="equal">clk_system</value>
+      </define>
+      <define>
+        <name>clk_system_debug</name>
+        <value type="equal">clk_system</value>
+      </define>
+      <define>
+        <name>clk_local_access</name>
+        <value type="equal">clk_core</value>
+      </define>
+      <define>
+        <name>clk_process_000</name>
+        <value type="equal">clk_core</value>
+      </define>
+      <define>
+        <name>clk_process_001</name>
+        <value type="equal">clk_core</value>
+      </define>
+      <define>
+        <name>clk_noc</name>
+        <value type="equal">clk_core</value>
+      </define>
+      <define>
+        <name>gclk_system</name>
+        <value type="equal">clk_system</value>
+      </define>
+      <define>
+        <name>gclk_core</name>
+        <value type="equal">clk_core</value>
+      </define>
+      <define>
+        <name>gclk_system_external</name>
+        <value type="equal">clk_system_external</value>
+      </define>
+      <define>
+        <name>gclk_system_debug</name>
+        <value type="equal">clk_system_debug</value>
+      </define>
+      <define>
+        <name>gclk_local_access</name>
+        <value type="equal">clk_local_access</value>
+      </define>
+      <define>
+        <name>gclk_process_000</name>
+        <value type="equal">clk_process_000</value>
+      </define>
+      <define>
+        <name>gclk_process_001</name>
+        <value type="equal">clk_process_001</value>
+      </define>
+      <define>
+        <name>gclk_noc</name>
+        <value type="equal">clk_noc</value>
+      </define>
+    </clock_info>
+    <include_header>ervp_platform_controller_memorymap_offset</include_header>
+    <include_header>ervp_external_peri_group_memorymap_offset</include_header>
+    <include_header>memorymap_info</include_header>
+    <include_header>ervp_global</include_header>
+    <include_header>platform_info</include_header>
+    <reset_property>
+      <id>rstnn_seqeunce</id>
+      <type>asynch</type>
+      <type>negative</type>
+    </reset_property>
+    <reset_property>
+      <id>rstpp_seqeunce</id>
+      <type>asynch</type>
+      <type>positive</type>
+    </reset_property>
+    <reset_property>
+      <type>asynch</type>
+      <type>negative</type>
+      <id>rstnn_noc</id>
+    </reset_property>
+    <network>
+      <comm_type>uart</comm_type>
+      <input>external_peri_group/uart</input>
+    </network>
+    <network>
+      <comm_type>spi</comm_type>
+      <input>external_peri_group/spi</input>
+    </network>
+    <network>
+      <comm_type>i2c</comm_type>
+      <input>external_peri_group/i2c</input>
+    </network>
+    <noc>
+      <name>RadarPIM_network_0</name>
+      <comm_type>memory</comm_type>
+      <memorymap_table>
+        <memorymap>
+          <target>i_snim_i_test1_slave</target>
+          <baseaddr type="hex">0x40000000</baseaddr>
+          <size type="hex">0x80000</size>
+        </memorymap>
+        <memorymap>
+          <target>i_snim_i_system_sram_no_name</target>
+          <baseaddr type="hex">0x40080000</baseaddr>
+          <size type="hex">0x40000</size>
+        </memorymap>
+        <memorymap>
+          <target>default_slave</target>
+          <baseaddr type="hex">0x400c0000</baseaddr>
+          <size type="hex">0x1000</size>
+        </memorymap>
+        <memorymap>
+          <target>i_snim_common_peri_group_no_name</target>
+          <baseaddr type="hex">0xe0000000</baseaddr>
+          <size type="hex">0x10000</size>
+        </memorymap>
+        <memorymap>
+          <target>i_snim_platform_controller_no_name</target>
+          <baseaddr type="hex">0xe1000000</baseaddr>
+          <size type="hex">0x40000</size>
+        </memorymap>
+        <memorymap>
+          <target>i_snim_external_peri_group_no_name</target>
+          <baseaddr type="hex">0xe1040000</baseaddr>
+          <size type="hex">0x10000</size>
+        </memorymap>
+        <memorymap>
+          <target>core_peri_group/no_name</target>
+          <baseaddr type="hex">0xf0000000</baseaddr>
+          <size type="hex">0x1000</size>
+        </memorymap>
+      </memorymap_table>
+      <ip_instance>
+        <name>i_system_router</name>
+        <library_name>router</library_name>
+        <parameter>
+          <id>BW_FNI_PHIT</id>
+          <value type="text">BW_FNI_PHIT</value>
+        </parameter>
+        <parameter>
+          <id>BW_BNI_PHIT</id>
+          <value type="text">BW_BNI_PHIT</value>
+        </parameter>
+        <parameter>
+          <id>NUM_MASTER</id>
+          <value type="dec">3</value>
+        </parameter>
+        <parameter>
+          <id>NUM_SLAVE</id>
+          <value type="dec">6</value>
+        </parameter>
+        <parameter>
+          <id>ROUTER_ID</id>
+          <value type="text">`ROUTER_ID_I_SYSTEM_ROUTER</value>
+        </parameter>
+        <routing_table>
+          <response_routing_info>
+            <target>i_mnim_i_main_core_no_name</target>
+            <port>0</port>
+          </response_routing_info>
+          <response_routing_info>
+            <target>i_mnim_i_sub_core_001_no_name</target>
+            <port>1</port>
+          </response_routing_info>
+          <response_routing_info>
+            <target>i_mnim_platform_controller_master</target>
+            <port>2</port>
+          </response_routing_info>
+          <request_routing_info>
+            <target>i_snim_i_test1_slave</target>
+            <port>0</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_i_system_sram_no_name</target>
+            <port>1</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_common_peri_group_no_name</target>
+            <port>2</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_external_peri_group_no_name</target>
+            <port>3</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_platform_controller_no_name</target>
+            <port>4</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>default_slave</target>
+            <port>5</port>
+          </request_routing_info>
+        </routing_table>
+      </ip_instance>
+      <routing_table>
+        <router>
+          <name>i_system_router</name>
+          <request_routing_info>
+            <target>i_snim_i_test1_slave</target>
+            <port>0</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_i_system_sram_no_name</target>
+            <port>1</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_common_peri_group_no_name</target>
+            <port>2</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_external_peri_group_no_name</target>
+            <port>3</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>i_snim_platform_controller_no_name</target>
+            <port>4</port>
+          </request_routing_info>
+          <request_routing_info>
+            <target>default_slave</target>
+            <port>5</port>
+          </request_routing_info>
+          <response_routing_info>
+            <target>i_mnim_i_main_core_no_name</target>
+            <port>0</port>
+          </response_routing_info>
+          <response_routing_info>
+            <target>i_mnim_i_sub_core_001_no_name</target>
+            <port>1</port>
+          </response_routing_info>
+          <response_routing_info>
+            <target>i_mnim_platform_controller_master</target>
+            <port>2</port>
+          </response_routing_info>
+        </router>
+      </routing_table>
+      <header_file>
+        <name>munoc_config</name>
+        <define>
+          <name>NUM_SLAVE</name>
+          <value type="dec">6</value>
+        </define>
+        <define>
+          <name>NUM_MASTER</name>
+          <value type="dec">3</value>
+        </define>
+        <define>
+          <name>BW_SLAVE_NODE_ID</name>
+          <value type="dec">3</value>
+        </define>
+        <define>
+          <name>BW_MASTER_NODE_ID</name>
+          <value type="dec">2</value>
+        </define>
+        <define>
+          <name>BW_LONGEST_AXI_TID</name>
+          <value type="dec">4</value>
+        </define>
+        <define>
+          <name>BW_SHORTEST_MASTER_DATA</name>
+          <value type="dec">32</value>
+        </define>
+        <define>
+          <name>BW_LONGEST_MASTER_DATA</name>
+          <value type="dec">32</value>
+        </define>
+        <define>
+          <name>MUNOC_USE_SINGLE_DATA_WIDTH</name>
+          <value type="bool">True</value>
+        </define>
+      </header_file>
+      <header_file>
+        <name>munoc_node_id</name>
+        <define>
+          <name>NODE_ID_CORE_PERI_GROUP_NO_NAME</name>
+          <value type="dec">1</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_MNIM_I_MAIN_CORE_NO_NAME</name>
+          <value type="dec">0</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_MNIM_I_SUB_CORE_001_NO_NAME</name>
+          <value type="dec">1</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_MNIM_PLATFORM_CONTROLLER_MASTER</name>
+          <value type="dec">2</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_SNIM_I_TEST1_SLAVE</name>
+          <value type="dec">4</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_SNIM_I_SYSTEM_SRAM_NO_NAME</name>
+          <value type="dec">3</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_SNIM_COMMON_PERI_GROUP_NO_NAME</name>
+          <value type="dec">0</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_SNIM_EXTERNAL_PERI_GROUP_NO_NAME</name>
+          <value type="dec">2</value>
+        </define>
+        <define>
+          <name>NODE_ID_I_SNIM_PLATFORM_CONTROLLER_NO_NAME</name>
+          <value type="dec">5</value>
+        </define>
+        <define>
+          <name>NODE_ID_DEFAULT_SLAVE</name>
+          <value type="dec">7</value>
+        </define>
+      </header_file>
+      <header_file>
+        <name>munoc_router_id</name>
+        <define>
+          <name>ROUTER_ID_I_SYSTEM_ROUTER</name>
+          <value type="dec">0</value>
+        </define>
+      </header_file>
+      <header_file>
+        <name>munoc_process_id</name>
+        <define>
+          <name>PROCESS_ID_I_MNIM_I_MAIN_CORE_NO_NAME</name>
+          <value type="dec">0</value>
+        </define>
+        <define>
+          <name>PROCESS_ID_I_MNIM_I_SUB_CORE_001_NO_NAME</name>
+          <value type="dec">1</value>
+        </define>
+      </header_file>
+      <include_header>munoc_network_include</include_header>
+    </noc>
+    <def_parameter>
+      <name>BW_FNI_PHIT</name>
+      <value type="text">`MAX_BW_FNI_PHIT</value>
+    </def_parameter>
+    <def_parameter>
+      <name>BW_BNI_PHIT</name>
+      <value type="text">`MAX_BW_BNI_PHIT</value>
+    </def_parameter>
+    <ila>ila_description</ila>
+    <top_module/>
+  </platform>
+</rvx>
